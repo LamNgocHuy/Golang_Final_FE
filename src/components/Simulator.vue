@@ -1,5 +1,5 @@
 <template>
-    <div class="simulator">
+    <div id="simulator">
         
     </div>
 </template>
@@ -11,5 +11,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+#simulator {
+    width: 20vw;
+    height: 93vh;
+    background-color: #333;
+    margin-left: 0;
+}
 </style>
