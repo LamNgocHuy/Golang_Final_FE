@@ -1,19 +1,19 @@
 <template>
-    <div class="d-flex flex-column">
+    <div class="d-flex flex-column container-fluid px-0">
         <!-- Header -->
         <div class="header">
 
         </div>
 
-        <div class="row">
+        <div class="row container-fluid px-0">
             <!-- Sidebar -->
-            <div class="col-2 border-end">
-                <Sidebar/>
+            <div class="col-2 pe-0 border-end">
+                <Sidebar :isSchedule="true"/>
             </div>
 
             <!-- Content -->
             <div class="content col-7">
-
+                
             </div>
 
             <!-- Simulator -->
@@ -38,8 +38,13 @@ export default {
 
 <style lang="scss" scoped>
 .header {
-    height: 10vh;
-    border-bottom: 1px solid #333;
+    height: 7vh;
+    background: #fff;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    z-index: 4;
+}
+
+.content {
     background: #fff;
 }
 
