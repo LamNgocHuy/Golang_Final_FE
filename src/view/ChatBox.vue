@@ -8,12 +8,12 @@
         <div class="row container-fluid px-0">
             <!-- Sidebar -->
             <div class="col-2 pe-0 border-end">
-                <Sidebar :isSchedule="true"/>
+                <Sidebar :isChat="true"/>
             </div>
 
             <!-- Content -->
             <div class="content col-7">
-                Schedule
+                Chat Box
             </div>
 
             <!-- Simulator -->
@@ -28,7 +28,7 @@
 import Sidebar from '../components/Sidebar.vue'
 import Simulator from '../components/Simulator.vue'
 export default {
-    name: 'ScheduleSend',
+    name: 'ChatBox',
     components: {
         Sidebar,
         Simulator

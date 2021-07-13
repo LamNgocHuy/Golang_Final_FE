@@ -5,16 +5,16 @@
       </a>
       <ul class="list-unstyled ps-2">
         <li class="mb-1">
-          <a href="#" class="btn align-items-center mb-2 w-100" :class="{active: isSchedule}">Schedule send</a>
+          <router-link to="/" href="#" class="btn align-items-center mb-2 w-100" :class="{active: isSchedule}">Schedule send</router-link>
         </li>
         <li class="mb-1">
-          <a href="#" class="btn align-items-center mb-2 w-100" :class="{active: isMessage}">Message content</a>
+          <router-link to="/message-contents" href="#" class="btn align-items-center mb-2 w-100" :class="{active: isMessage}">Message content</router-link>
         </li>
         <li class="mb-1">
-          <a href="#" class="btn align-items-center mb-2 w-100" :class="{active: isSegment}">Segment list</a>
+          <router-link to="/segment-list" class="btn align-items-center mb-2 w-100" :class="{active: isSegment}">Segment list</router-link>
         </li>
         <li class="mb-1">
-          <a href="#" class="btn align-items-center mb-2 w-100" :class="{active: isChat}">Chat box</a>
+          <router-link to="/chat-box" class="btn align-items-center mb-2 w-100" :class="{active: isChat}">Chat box</router-link>
         </li>
       </ul>
     </div>
