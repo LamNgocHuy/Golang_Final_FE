@@ -47,6 +47,21 @@ body {
   }
 }
 
+table {
+  font-size: 1.1rem !important;
+}
+
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+.row {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+  --bs-gutter-x: 0px !important;
+}
+
 textarea:focus,
 input[type="text"]:focus,
 input[type="password"]:focus,

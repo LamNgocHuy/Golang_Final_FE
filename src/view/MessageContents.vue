@@ -12,27 +12,34 @@
             </div>
 
             <!-- Content -->
-            <div class="content col-10">
-                <div class="d-flex flex-column">
-                    <h1>List message contents</h1>
-                            <table class="table table-hover">
-                                <tbody>
-                                    <tr  v-for="(info,i) in messages" :key="i">
-                                        <td class="w-50">{{info.title}}</td>
-                                        <td >
-                                            <ul v-for="(icon,index) in info.icons" :key="index">
-                                                <li>{{icon}}</li>
-                                            </ul>
-                                        </td>
-                                        <td >{{info.status}}</td>
-                                        <td >{{info.createAt}}</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-
+            <div class="content col-10 d-flex flex-row">
+                <div class="col content-body">
+                    <h1 class="content-title">List message contents</h1>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th class="text-center">Action</th>
+                                <th>Status</th>
+                                <th>Send Time</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="(info,i) in messages" :key="i" @click="showSimulator">
+                                <td class="w-35">{{info.title}}</td>
+                                <td >
+                                    <ul v-for="(icon,index) in info.icons" :key="index">
+                                        <li>{{icon}}</li>
+                                    </ul>
+                                </td>
+                                <td >{{info.status}}</td>
+                                <td >{{info.createAt}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                
-                <div>
+                <!-- Simulator -->
+                <div v-if="isSimulator">
                     <Simulator/>
                 </div>
             </div>
@@ -87,8 +94,17 @@ export default {
             ],
 
         }
+    },
+    computed: {
+        isSimulator() {
+            return this.$store.getters.isSimulator
+        }
+    },
+    methods: {
+        showSimulator() {
+            this.$store.dispatch('showSimulator')
+        }
     }
-    
 }
 </script>
 
@@ -102,10 +118,25 @@ export default {
 
 .content {
     background: #fff;
-    padding: 30px 20px;
+    padding-left: 20px;
 }
+
+.content-body {
+    height: 93vh;
+    overflow-y: auto;
+}
+
 .header-title{
     margin-top:50px
+}
+
+.content-title {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.w-35 {
+    width: 35%;
 }
 ul, li {
     display:inline

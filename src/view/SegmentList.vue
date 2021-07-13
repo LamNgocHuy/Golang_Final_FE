@@ -12,15 +12,18 @@
             </div>
 
             <!-- Content -->
-            <div class="content col-7">
-                SegmentList
+            <div class="content col-10 d-flex flex-row">
+                <div class="col">
+                    <h1 class="page-title">Segment List</h1>
+                </div>
+                <!-- Simulator -->
+                <div v-if="isSimulator" class="d-flex">
+                    <Simulator/>
+                </div>
             </div>
 
-            <!-- Simulator -->
-            <div class="col-3 border-start">
-                <Simulator/>
-            </div>
-        </div>        
+        </div>  
+
     </div>
 </template>
 
@@ -32,6 +35,11 @@ export default {
     components: {
         Sidebar,
         Simulator
+    },
+    computed: {
+        isSimulator() {
+            return this.$store.getters.isSimulator
+        }
     }
 }
 </script>
@@ -46,6 +54,17 @@ export default {
 
 .content {
     background: #fff;
+    padding-left: 20px;
+    overflow-y: auto;
 }
 
+.page-title {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.title {
+    letter-spacing: 1.4px;
+    font-size: 2.7rem;
+}
 </style>
