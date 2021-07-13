@@ -1,12 +1,16 @@
 <template>
     <div id="simulator">
-        
+        <Pixel4/>
     </div>
 </template>
 
 <script>
+import Pixel4 from '../components/Pixel4.vue'
 export default {
-    name: 'Simulator'
+    name: 'Simulator',
+    components:{
+        Pixel4
+    }
 }
 </script>
 
@@ -14,7 +18,7 @@ export default {
 #simulator {
     width: 20vw;
     height: 93vh;
-    background-color: #333;
+    background-color: rgb(45, 190, 183);
     margin-left: 0;
 }
 </style>
