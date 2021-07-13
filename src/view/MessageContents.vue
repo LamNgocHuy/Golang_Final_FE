@@ -12,14 +12,32 @@
             </div>
 
             <!-- Content -->
-            <div class="content col-7">
-                Message
+            <div class="content col-10">
+                <div class="d-flex flex-column">
+                    <h1>List message contents</h1>
+                            <table class="table table-hover">
+                                <tbody>
+                                    <tr  v-for="(info,i) in messages" :key="i">
+                                        <td class="w-50">{{info.title}}</td>
+                                        <td >
+                                            <ul v-for="(icon,index) in info.icons" :key="index">
+                                                <li>{{icon}}</li>
+                                            </ul>
+                                        </td>
+                                        <td >{{info.status}}</td>
+                                        <td >{{info.createAt}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                </div>
+                
+                <div>
+                    <Simulator/>
+                </div>
             </div>
 
             <!-- Simulator -->
-            <div class="col-3 border-start">
-                <Simulator/>
-            </div>
         </div>        
     </div>
 </template>
@@ -32,7 +50,45 @@ export default {
     components: {
         Sidebar,
         Simulator
+    },
+    data() {
+        return {
+            messages:[
+                {
+                    title:"test",
+                    icons:["icon1","icon2"],
+                    status:"Draft",
+                    createAt:"06/12/2021 14:00"
+                },
+                {
+                    title:"test",
+                    icons:["icon1","icon2"],
+                    status:"",
+                   createAt:"06/12/2021 14:00"
+                },
+                {
+                    title:"test",
+                    icons:["icon1","icon2"],
+                    status:"",
+                   createAt:"06/12/2021 14:00"
+                },
+                {
+                    title:"test",
+                    icons:["icon1","icon2"],
+                    status:"Draft",
+                  createAt:"06/12/2021 14:00"
+                },
+                {
+                    title:"test",
+                    icons:["icon1","icon2"],
+                    status:"",
+                   createAt:"06/12/2021 14:00"
+                },
+            ],
+
+        }
     }
+    
 }
 </script>
 
@@ -46,6 +102,12 @@ export default {
 
 .content {
     background: #fff;
+    padding: 30px 20px;
 }
-
+.header-title{
+    margin-top:50px
+}
+ul, li {
+    display:inline
+}
 </style>
