@@ -181,14 +181,6 @@ li{
     margin: 2px;
 }
 
-
-
-
-
-
-
-
-
 .battery {
   border: 2px solid #333;
   width: 12px;
