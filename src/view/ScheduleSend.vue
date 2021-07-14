@@ -59,7 +59,7 @@ import SimulatorMixin from '../mixins/simulator'
 export default {
     name: 'ScheduleSend',
     components: {
-        Table
+        Table,
     },
     data() {
         return {

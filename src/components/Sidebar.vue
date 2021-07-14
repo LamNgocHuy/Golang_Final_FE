@@ -16,6 +16,9 @@
         <li class="mb-1">
           <router-link :to="{name: 'ChatBox'}" class="btn align-items-center mb-2 w-100">Chat box</router-link>
         </li>
+        <li class="mb-1">
+          <a href="#" class="btn align-items-center mb-2 w-100" @click="toggleLoader">Loading</a>
+        </li>
       </ul>
     </div>
 </template>
@@ -23,15 +26,14 @@
 <script>
 export default {
     name: 'Sidebar',
-    props: {
-      isSchedule: Boolean,
-      isMessage: Boolean,
-      isSegment: Boolean,
-      isChat: Boolean,
-    },
     methods: {
       hideSimulator() {
         this.$store.dispatch('simulator/hideSimulator')
+      },
+      async toggleLoader() {
+        this.$store.dispatch('loader/showLoader')
+        await new Promise(resolve => setTimeout(resolve, 5000))
+        this.$store.dispatch('loader/hideLoader')
       }
     }
 }

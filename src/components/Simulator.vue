@@ -22,6 +22,6 @@ export default {
     height: 100%;
     background-color: #fff;
     margin-left: 0;
-    
+    padding: 10px;
 }
 </style>

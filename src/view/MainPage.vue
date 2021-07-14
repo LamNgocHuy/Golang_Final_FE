@@ -21,20 +21,22 @@
                     <Simulator/>
                 </div>
             </div>
-
         </div>
+        <Loader :opacityLoader='0.7'/>  
     </div>
 </template>
 
 <script>
 import Sidebar from '../components/Sidebar.vue'
 import Simulator from '../components/Simulator.vue'
+import Loader from '../components/Loader.vue'
 import {mapGetters} from 'vuex'
 export default {
     name: 'MainPage',
     components: {
         Sidebar,
-        Simulator
+        Simulator,
+        Loader
     },
     computed: {
         ...mapGetters({

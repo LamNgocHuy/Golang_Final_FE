@@ -34,7 +34,7 @@ const routes = [
                 component: ChatBox
             }, 
         ]
-    }
+    },
 ]
 
 const router = new VueRouter({
