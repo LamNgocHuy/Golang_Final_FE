@@ -1,45 +1,11 @@
 import Vuex from 'vuex'
 import Vue from 'vue'
+import simulator from './modules/simulator'
 
 Vue.use(Vuex)
 
-const state = {
-    isSimulator: false,
-}
-
-const getters = {
-    isSimulator() {
-        return state.isSimulator
+export default new Vuex.Store ({
+    modules: {
+        simulator: simulator //namespaced: file import
     }
-}
-
-const mutations = {
-    showSimulator(state) {
-        state.isSimulator = true
-    },
-    hideSimulator(state) {
-        state.isSimulator = false
-    },
-    toggleSimulator(state) {
-        state.isSimulator = !state.isSimulator
-    }
-}
-
-const actions = {
-    showSimulator({commit}) {
-        commit('showSimulator')
-    },
-    hideSimulator({commit}) {
-        commit('hideSimulator')
-    },
-    toggleSimulator({commit}) {
-        commit('toggleSimulator')
-    }
-}
-
-export default new Vuex.Store({
-    state,
-    getters,
-    actions,
-    mutations,
 });

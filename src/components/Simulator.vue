@@ -20,7 +20,8 @@ export default {
 #simulator {
     width: 20vw;
     height: 100%;
-    background-color: #333;
+    background-color: #fff;
     margin-left: 0;
+    
 }
 </style>

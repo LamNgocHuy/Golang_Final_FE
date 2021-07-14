@@ -25,15 +25,6 @@ body {
   font-size: 15px;
 }
 
-.form > table > tr > td {
-  border: none !important;
-}
-
-.form > table > tr {
-  border: none !important;
-  margin-top: 10px !important;
-}
-
 .btn-primary {
   background: #C80064 !important;
   color: #fff !important;
@@ -45,10 +36,6 @@ body {
     box-shadow: none !important;
     // border-color: #C80064 !important;
   }
-}
-
-table {
-  font-size: 1.1rem !important;
 }
 
 ::-webkit-scrollbar {

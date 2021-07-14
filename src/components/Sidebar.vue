@@ -3,18 +3,18 @@
       <a href="/" class="d-flex align-items-center justify-content-center py-3 mb-3 text-decoration-none border-bottom">
         <img src="../assets/logo.png" alt="logo-sidebar" width="100px" height="100px">
       </a>
-      <ul class="list-unstyled ps-2" @click="hideSimulator">
+      <ul class="list-unstyled ps-2" @click="hideSimulator" >
         <li class="mb-1">
-          <router-link to="/" class="btn align-items-center mb-2 w-100" :class="{active: isSchedule}">Schedule send</router-link>
+          <router-link :to="{name: 'ScheduleSend'}" class="btn align-items-center mb-2 w-100" >Schedule send</router-link>
         </li>
         <li class="mb-1">
-          <router-link to="/message-contents" class="btn align-items-center mb-2 w-100" :class="{active: isMessage}">Message content</router-link>
+          <router-link :to="{name: 'MessageContents'}" class="btn align-items-center mb-2 w-100">Message content</router-link>
         </li>
         <li class="mb-1">
-          <router-link to="/segment-list" class="btn align-items-center mb-2 w-100" :class="{active: isSegment}">Segment list</router-link>
+          <router-link :to="{name: 'SegmentList'}" class="btn align-items-center mb-2 w-100">Segment list</router-link>
         </li>
         <li class="mb-1">
-          <router-link to="/chat-box" class="btn align-items-center mb-2 w-100" :class="{active: isChat}">Chat box</router-link>
+          <router-link :to="{name: 'ChatBox'}" class="btn align-items-center mb-2 w-100">Chat box</router-link>
         </li>
       </ul>
     </div>
@@ -31,7 +31,7 @@ export default {
     },
     methods: {
       hideSimulator() {
-        this.$store.dispatch('hideSimulator')
+        this.$store.dispatch('simulator/hideSimulator')
       }
     }
 }
@@ -46,16 +46,15 @@ li > a {
   text-align: left !important;
   font-weight: 400 !important;
   font-size: 1.2rem;
-  &:hover{
-    background: #da5f9c;
-    color: #fff;
-  }
   &:focus, &:active {
     box-shadow: none;
   }
 }
-.active {
+.router-link-active {
   background: #da5f9c;
   color: #fff;
+  &:hover {
+    color: #fff;
+  }
 }
 </style>

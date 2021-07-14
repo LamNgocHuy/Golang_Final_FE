@@ -26,14 +26,14 @@
             </div>
             <div class="nav-bar">
                 <ul class="full-width">
-                    <li class="full-width" >
-                        <div id="triangle-left"></div>
+                    <li>
+                        <i class='bx bxs-left-arrow'></i>
                     </li>
-                    <li class="full-width">
-                        <div id="circle"></div>
+                    <li>
+                        <i class='bx bxs-circle' ></i>
                     </li>
-                    <li class="full-width">
-                         <div id="square"></div>
+                    <li>
+                        <i class='bx bxs-rectangle'></i>
                     </li>
                 </ul>
             </div>
@@ -52,13 +52,14 @@ export default {
 #pixel4{
     width: 100%;
     height: 95%;
-    
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.95);
+    z-index: 2;
 }
 .frame{
     position: relative;
     top:2.5%;
-background: rgb(0,0,0);
-background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(65,63,63,1) 5%, rgba(96,88,88,1) 10%, rgba(65,63,63,1) 15%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 73%, rgba(23,22,22,1) 80%, rgba(65,63,63,1) 85%, rgba(107,100,100,1) 90%, rgba(65,63,63,1) 95%, rgba(0,0,0,1) 100%);
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(65,63,63,1) 5%, rgba(96,88,88,1) 10%, rgba(65,63,63,1) 15%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 73%, rgba(23,22,22,1) 80%, rgba(65,63,63,1) 85%, rgba(107,100,100,1) 90%, rgba(65,63,63,1) 95%, rgba(0,0,0,1) 100%);
     border-radius: 35px;
     align-items: center;
 }
@@ -73,55 +74,39 @@ background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(65,63,63,1) 5%, rgba(9
 }
 .nav-bar{
     width: 100%;
-    height: 7%;    
+    height: 6.8%;    
     background-color:rgba(7, 7, 7, 0.932);
-    border-bottom-left-radius: 35px;
-    border-bottom-right-radius: 35px;
-    position: relative;
+    border-bottom-left-radius: 33px;
+    border-bottom-right-radius: 33px;
+    position: absolute;
     margin: auto;
-    top: 87%;
+    bottom: 0;
     align-items: center;
 }
-ul{
-    padding:0px
-}
-li{
-    padding: 0px;
-}
-.nav-bar > ul {
+.nav-bar > ul{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding:0px;
     display: flex;
     flex-direction: row;
 }
 .nav-bar > ul > li {
     width: 33.3333333333%;
-    display: inline;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-#triangle-left {
-    width: 50%;
-    height: 0;
-    border-top: 6px solid transparent;
-    border-right: 12px solid rgb(238, 230, 230);
-    border-bottom: 6px solid transparent;
-    top: 20%;
+.nav-bar > ul > li > i {
+    color: #fff;
 }
 
-#circle {
-  width: 12px;
-  height: 12px;
-  background: rgb(238, 230, 230);
-  border-radius: 50%
-}
-#square {
-  width: 12px;
-  height: 12px;
-  background:rgb(238, 230, 230);
+li{
+    padding: 0px;
 }
   
-.full-width{
-    width:100%;
-    margin:auto
-}
 .header-phone{
     width: 100px;
     height: 20px;

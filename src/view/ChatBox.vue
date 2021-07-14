@@ -1,69 +1,20 @@
 <template>
-    <div class="d-flex flex-column container-fluid px-0">
-        <!-- Header -->
-        <div class="header">
-
-        </div>
-
-        <div class="row container-fluid px-0">
-            <!-- Sidebar -->
-            <div class="col-2 pe-0 border-end">
-                <Sidebar :isChat="true"/>
-            </div>
-
-            <!-- Content -->
-            <div class="content col-10 d-flex flex-row">
-                <div class="col">
-                    <h1 class="page-title">Chat Box</h1>
-                </div>
-                <!-- Simulator -->
-                <div v-if="isSimulator" class="d-flex">
-                    <Simulator/>
-                </div>
-            </div>
-
-        </div>  
-
+    <div>
+        <h1 class="content-title">Chat Box</h1>
     </div>
 </template>
 
 <script>
-import Sidebar from '../components/Sidebar.vue'
-import Simulator from '../components/Simulator.vue'
 export default {
     name: 'ChatBox',
-    components: {
-        Sidebar,
-        Simulator
-    },
-    computed: {
-        isSimulator() {
-            return this.$store.getters.isSimulator
-        }
-    }
 }
 </script>
 
 <style lang="scss" scoped>
-.header {
-    height: 7vh;
-    background: #fff;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-    z-index: 4;
-}
 
-.content {
-    background: #fff;
-    padding-left: 20px;
-}
-
-.page-title {
+.content-title {
     margin-top: 25px;
     margin-bottom: 25px;
 }
 
-.title {
-    letter-spacing: 1.4px;
-    font-size: 2.7rem;
-}
 </style>
