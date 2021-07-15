@@ -16,7 +16,7 @@ export default {
     },
     computed: {
     ...mapGetters({
-        isLoading: 'loader/isLoading'
+        isLoading: 'LOADER/isLoading'
     })
   }
 }

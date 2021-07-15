@@ -2,6 +2,7 @@ import ScheduleSend from '../view/ScheduleSend.vue'
 import MessageContents from '../view/MessageContents.vue'
 import SegmentList from '../view/SegmentList.vue'
 import ChatBox from '../view/ChatBox.vue'
+import MessageCreate from '../view/MessageCreate.vue'
 import MainPage from '../view/MainPage.vue'
 import VueRouter from 'vue-router'
 import Vue from 'vue'
@@ -33,6 +34,11 @@ const routes = [
                 name: "ChatBox", 
                 component: ChatBox
             }, 
+            {
+                path: "message-create", 
+                name: "MessageCreate", 
+                component: MessageCreate
+            }
         ]
     },
 ]

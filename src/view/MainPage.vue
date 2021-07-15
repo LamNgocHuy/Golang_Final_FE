@@ -40,7 +40,7 @@ export default {
     },
     computed: {
         ...mapGetters({
-            isSimulator: 'simulator/isSimulator'
+            isSimulator: 'SIMULATOR/isSimulator'
         })
     }
 }

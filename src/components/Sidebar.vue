@@ -24,18 +24,17 @@
 </template>
 
 <script>
+import SimulatorMixin from '../mixins/simulator-mixins'
 export default {
     name: 'Sidebar',
     methods: {
-      hideSimulator() {
-        this.$store.dispatch('simulator/hideSimulator')
-      },
       async toggleLoader() {
-        this.$store.dispatch('loader/showLoader')
+        this.$store.dispatch('LOADER/showLoader')
         await new Promise(resolve => setTimeout(resolve, 5000))
-        this.$store.dispatch('loader/hideLoader')
+        this.$store.dispatch('LOADER/hideLoader')
       }
-    }
+    },
+    mixins: [SimulatorMixin]
 }
 </script>
 
